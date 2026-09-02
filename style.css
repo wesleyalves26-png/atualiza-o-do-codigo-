@@ -1,104 +1,21 @@
-/* Reset e Configurações de Base */
-body, html {
-    margin: 0;
-    padding: 0;
+/* Adicione este bloco no seu arquivo style.css */
+
+.imagem-capa {
     width: 100%;
-    height: 100%;
-    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    max-width: 250px; /* Limita o tamanho para não quebrar o layout */
+    height: auto; /* Mantém a proporção original da imagem */
+    border-radius: 50%; /* Deixa a imagem redonda, como um portal ou planeta */
+    margin-bottom: 25px; /* Espaço entre a imagem e o título */
     
-    /* DECISÃO VISUAL 1: Fundo escuro em tom roxo/azul profundo (confortável para leitura noturna) */
-    background-color: #0b0813; 
-    color: #ffffff;
+    /* Efeito de brilho neon combinando com o tema anterior */
+    box-shadow: 0 0 20px rgba(0, 242, 254, 0.4); 
+    border: 2px solid rgba(0, 242, 254, 0.2);
     
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
+    /* Transição suave ao carregar */
+    transition: transform 0.3s ease;
 }
 
-/* Container Principal */
-.tela-inicio {
-    text-align: center;
-    padding: 40px;
-    max-width: 600px;
-    border-radius: 16px;
-    
-    /* DECISÃO VISUAL 2: Um leve painel translúcido atrás do texto para dar profundidade */
-    background: rgba(255, 255, 255, 0.02);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-/* Título Impactante */
-.titulo-jogo {
-    font-size: 3.8rem;
-    margin-bottom: 15px;
-    font-weight: 900;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    
-    /* DECISÃO VISUAL 3: Degradê degradê neon no texto e sombra brilhante (Glow Effect) */
-    background: linear-gradient(45deg, #00f2fe, #4facfe);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    filter: drop-shadow(0px 4px 12px rgba(0, 242, 254, 0.3));
-}
-
-/* Subtítulo */
-.subtitulo-jogo {
-    font-size: 1.15rem;
-    margin-bottom: 50px;
-    /* DECISÃO VISUAL 4: Tom lilás suave para o texto de apoio, mantendo a harmonia e o conforto */
-    color: #b3a9cd;
-    line-height: 1.6;
-    letter-spacing: 0.5px;
-}
-
-/* Botão de Ação */
-.botao-iniciar {
-    display: inline-block;
-    padding: 16px 50px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    color: #ffffff;
-    
-    /* DECISÃO VISUAL 5: Botão com fundo Magenta Neon contrastando com o título Azul */
-    background: linear-gradient(135deg, #f35588, #ff007f);
-    border: none;
-    border-radius: 8px; /* Cantos levemente retos combinam mais com o estilo Sci-Fi */
-    cursor: pointer;
-    
-    box-shadow: 0 0 25px rgba(255, 0, 127, 0.4);
-    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
-    animation: pulsarNeon 2.5s infinite;
-}
-
-/* Interação com o Mouse (Hover) */
-.botao-iniciar:hover {
-    background: linear-gradient(135deg, #ff007f, #f35588);
-    box-shadow: 0 0 40px rgba(255, 0, 127, 0.8);
-    transform: translateY(-4px); /* Feedback visual de clique/flutuação */
-}
-
-/* Animação de Pulso Neon */
-@keyframes pulsarNeon {
-    0% {
-        box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
-    }
-    50% {
-        box-shadow: 0 0 35px rgba(255, 0, 127, 0.7), 0 0 10px rgba(0, 242, 254, 0.2);
-    }
-    100% {
-        box-shadow: 0 0 20px rgba(255, 0, 127, 0.4);
-    }
-}
-
-/* Ajustes para Celular */
-@media (max-width: 600px) {
-    .tela-inicio { padding: 20px; }
-    .titulo-jogo { font-size: 2.6rem; letter-spacing: 1px; }
-    .subtitulo-jogo { font-size: 1rem; margin-bottom: 40px; }
-    .botao-iniciar { padding: 14px 35px; font-size: 1rem; }
+/* Efeito sutil quando o jogador passar o mouse na tela */
+.imagem-capa:hover {
+    transform: scale(1.05) rotate(5deg); /* Gira e aumenta levemente */
 }
