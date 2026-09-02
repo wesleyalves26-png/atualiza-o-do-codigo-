@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tela Inicial - O Jogo</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- 
+      JUSTIFICATIVA DA TAG: Escolhi a tag <main> em vez de <div> para envelopar o conteúdo.
+      A tag <main> é semântica e indica aos navegadores e leitores de tela que este é o 
+      conteúdo principal e central desta página, melhorando a acessibilidade e a estrutura do código.
+    -->
+    <main class="tela-inicio">
+        <!-- Título e Subtítulo -->
+        <h1 class="titulo-jogo">O Mistério de Eldoria</h1> 
+        <p class="subtitulo-jogo">Uma jornada cheia de escolhas e perigos.</p>
+        
+        <!-- Botão com ID para controle do JavaScript -->
+        <button id="btn-iniciar" class="botao-iniciar">Iniciar Aventura</button>
+    </main>
+
+    <script>
+        document.getElementById('btn-iniciar').addEventListener('click', function() {
+            this.style.transform = 'scale(0.95)';
+            setTimeout(() => {
+                window.location.href = 'historia.html';
+            }, 150);
+        });
+    </script>
+</body>
+</html>
